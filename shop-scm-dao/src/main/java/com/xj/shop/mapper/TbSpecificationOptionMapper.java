@@ -1,8 +1,8 @@
 package com.xj.shop.mapper;
 
-import com.pinyougou.pojo.TbSpecificationOption;
-import com.pinyougou.pojo.TbSpecificationOptionExample;
-import org.apache.ibatis.annotations.Param;
+
+import com.xj.shop.domain.TbSpecificationOption;
+import com.xj.shop.domain.TbSpecificationOptionExample;
 
 import java.util.List;
 
@@ -21,9 +21,9 @@ public interface TbSpecificationOptionMapper {
 
     TbSpecificationOption selectByPrimaryKey(Long id);
 
-    int updateByExampleSelective(@Param( "record" ) TbSpecificationOption record, @Param( "example" ) TbSpecificationOptionExample example);
-
-    int updateByExample(@Param( "record" ) TbSpecificationOption record, @Param( "example" ) TbSpecificationOptionExample example);
+//    int updateByExampleSelective(@Param( "record" ) TbSpecificationOption record, @Param( "example" ) TbSpecificationOptionExample example);
+//
+//    int updateByExample(@Param( "record" ) TbSpecificationOption record, @Param( "example" ) TbSpecificationOptionExample example);
 
     int updateByPrimaryKeySelective(TbSpecificationOption record);
 

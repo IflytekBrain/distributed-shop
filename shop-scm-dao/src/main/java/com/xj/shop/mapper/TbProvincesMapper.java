@@ -1,8 +1,8 @@
 package com.xj.shop.mapper;
 
-import com.pinyougou.pojo.TbProvinces;
-import com.pinyougou.pojo.TbProvincesExample;
-import org.apache.ibatis.annotations.Param;
+
+import com.xj.shop.domain.TbProvinces;
+import com.xj.shop.domain.TbProvincesExample;
 
 import java.util.List;
 
@@ -21,9 +21,9 @@ public interface TbProvincesMapper {
 
     TbProvinces selectByPrimaryKey(Integer id);
 
-    int updateByExampleSelective(@Param( "record" ) TbProvinces record, @Param( "example" ) TbProvincesExample example);
-
-    int updateByExample(@Param( "record" ) TbProvinces record, @Param( "example" ) TbProvincesExample example);
+//    int updateByExampleSelective(@Param( "record" ) TbProvinces record, @Param( "example" ) TbProvincesExample example);
+//
+//    int updateByExample(@Param( "record" ) TbProvinces record, @Param( "example" ) TbProvincesExample example);
 
     int updateByPrimaryKeySelective(TbProvinces record);
 

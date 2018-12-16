@@ -1,8 +1,9 @@
 package com.xj.shop.mapper;
 
-import com.pinyougou.pojo.TbOrderItem;
-import com.pinyougou.pojo.TbOrderItemExample;
-import org.apache.ibatis.annotations.Param;
+
+
+import com.xj.shop.domain.TbOrderItem;
+import com.xj.shop.domain.TbOrderItemExample;
 
 import java.util.List;
 
@@ -21,9 +22,9 @@ public interface TbOrderItemMapper {
 
     TbOrderItem selectByPrimaryKey(Long id);
 
-    int updateByExampleSelective(@Param( "record" ) TbOrderItem record, @Param( "example" ) TbOrderItemExample example);
-
-    int updateByExample(@Param( "record" ) TbOrderItem record, @Param( "example" ) TbOrderItemExample example);
+//    int updateByExampleSelective(@Param( "record" ) TbOrderItem record, @Param( "example" ) TbOrderItemExample example);
+//
+//    int updateByExample(@Param( "record" ) TbOrderItem record, @Param( "example" ) TbOrderItemExample example);
 
     int updateByPrimaryKeySelective(TbOrderItem record);
 

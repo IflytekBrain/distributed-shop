@@ -1,6 +1,8 @@
 package com.xj.shop.dto;
 
-import com.pinyougou.pojo.TbOrderItem;
+
+
+import com.xj.shop.domain.TbOrderItem;
 
 import java.io.Serializable;
 import java.util.List;

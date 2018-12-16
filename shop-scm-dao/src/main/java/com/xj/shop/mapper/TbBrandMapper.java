@@ -1,8 +1,7 @@
 package com.xj.shop.mapper;
 
-import com.pinyougou.pojo.TbBrand;
-import com.pinyougou.pojo.TbBrandExample;
-import org.apache.ibatis.annotations.Param;
+import com.xj.shop.domain.TbBrand;
+import com.xj.shop.domain.TbBrandExample;
 
 import java.util.List;
 import java.util.Map;
@@ -22,9 +21,9 @@ public interface TbBrandMapper {
 
     TbBrand selectByPrimaryKey(Long id);
 
-    int updateByExampleSelective(@Param( "record" ) TbBrand record, @Param( "example" ) TbBrandExample example);
-
-    int updateByExample(@Param( "record" ) TbBrand record, @Param( "example" ) TbBrandExample example);
+//    int updateByExampleSelective(@Param( "record" ) TbBrand record, @Param( "example" ) TbBrandExample example);
+//
+//    int updateByExample(@Param( "record" ) TbBrand record, @Param( "example" ) TbBrandExample example);
 
     int updateByPrimaryKeySelective(TbBrand record);
 

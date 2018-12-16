@@ -1,8 +1,8 @@
 package com.xj.shop.mapper;
 
-import com.pinyougou.pojo.TbTypeTemplate;
-import com.pinyougou.pojo.TbTypeTemplateExample;
-import org.apache.ibatis.annotations.Param;
+
+import com.xj.shop.domain.TbTypeTemplate;
+import com.xj.shop.domain.TbTypeTemplateExample;
 
 import java.util.List;
 
@@ -21,9 +21,9 @@ public interface TbTypeTemplateMapper {
 
     TbTypeTemplate selectByPrimaryKey(Long id);
 
-    int updateByExampleSelective(@Param( "record" ) TbTypeTemplate record, @Param( "example" ) TbTypeTemplateExample example);
-
-    int updateByExample(@Param( "record" ) TbTypeTemplate record, @Param( "example" ) TbTypeTemplateExample example);
+//    int updateByExampleSelective(@Param( "record" ) TbTypeTemplate record, @Param( "example" ) TbTypeTemplateExample example);
+//
+//    int updateByExample(@Param( "record" ) TbTypeTemplate record, @Param( "example" ) TbTypeTemplateExample example);
 
     int updateByPrimaryKeySelective(TbTypeTemplate record);
 

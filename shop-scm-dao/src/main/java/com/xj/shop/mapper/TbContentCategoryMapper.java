@@ -1,8 +1,8 @@
 package com.xj.shop.mapper;
 
-import com.pinyougou.pojo.TbContentCategory;
-import com.pinyougou.pojo.TbContentCategoryExample;
-import org.apache.ibatis.annotations.Param;
+
+import com.xj.shop.domain.TbContentCategory;
+import com.xj.shop.domain.TbContentCategoryExample;
 
 import java.util.List;
 
@@ -21,9 +21,9 @@ public interface TbContentCategoryMapper {
 
     TbContentCategory selectByPrimaryKey(Long id);
 
-    int updateByExampleSelective(@Param( "record" ) TbContentCategory record, @Param( "example" ) TbContentCategoryExample example);
-
-    int updateByExample(@Param( "record" ) TbContentCategory record, @Param( "example" ) TbContentCategoryExample example);
+//    int updateByExampleSelective(@Param( "record" ) TbContentCategory record, @Param( "example" ) TbContentCategoryExample example);
+//
+//    int updateByExample(@Param( "record" ) TbContentCategory record, @Param( "example" ) TbContentCategoryExample example);
 
     int updateByPrimaryKeySelective(TbContentCategory record);
 

@@ -1,7 +1,8 @@
 package com.xj.shop.dto;
 
-import com.pinyougou.pojo.TbSpecification;
-import com.pinyougou.pojo.TbSpecificationOption;
+
+import com.xj.shop.domain.TbSpecification;
+import com.xj.shop.domain.TbSpecificationOption;
 
 import java.io.Serializable;
 import java.util.List;

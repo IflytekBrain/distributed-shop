@@ -1,8 +1,8 @@
 package com.xj.shop.mapper;
 
-import com.pinyougou.pojo.TbUser;
-import com.pinyougou.pojo.TbUserExample;
-import org.apache.ibatis.annotations.Param;
+
+import com.xj.shop.domain.TbUser;
+import com.xj.shop.domain.TbUserExample;
 
 import java.util.List;
 
@@ -21,9 +21,9 @@ public interface TbUserMapper {
 
     TbUser selectByPrimaryKey(Long id);
 
-    int updateByExampleSelective(@Param( "record" ) TbUser record, @Param( "example" ) TbUserExample example);
-
-    int updateByExample(@Param( "record" ) TbUser record, @Param( "example" ) TbUserExample example);
+//    int updateByExampleSelective(@Param( "record" ) TbUser record, @Param( "example" ) TbUserExample example);
+//
+//    int updateByExample(@Param( "record" ) TbUser record, @Param( "example" ) TbUserExample example);
 
     int updateByPrimaryKeySelective(TbUser record);
 

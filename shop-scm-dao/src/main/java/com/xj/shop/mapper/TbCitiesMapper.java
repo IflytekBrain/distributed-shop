@@ -1,8 +1,7 @@
 package com.xj.shop.mapper;
 
-import com.pinyougou.pojo.TbCities;
-import com.pinyougou.pojo.TbCitiesExample;
-import org.apache.ibatis.annotations.Param;
+import com.xj.shop.domain.TbCities;
+import com.xj.shop.domain.TbCitiesExample;
 
 import java.util.List;
 
@@ -21,9 +20,9 @@ public interface TbCitiesMapper {
 
     TbCities selectByPrimaryKey(Integer id);
 
-    int updateByExampleSelective(@Param( "record" ) TbCities record, @Param( "example" ) TbCitiesExample example);
-
-    int updateByExample(@Param( "record" ) TbCities record, @Param( "example" ) TbCitiesExample example);
+//    int updateByExampleSelective(@Param( "record" ) TbCities record, @Param( "example" ) TbCitiesExample example);
+//
+//    int updateByExample(@Param( "record" ) TbCities record, @Param( "example" ) TbCitiesExample example);
 
     int updateByPrimaryKeySelective(TbCities record);
 
