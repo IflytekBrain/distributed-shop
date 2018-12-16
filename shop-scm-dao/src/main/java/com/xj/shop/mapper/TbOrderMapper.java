@@ -4,6 +4,7 @@ package com.xj.shop.mapper;
 
 import com.xj.shop.domain.TbOrder;
 import com.xj.shop.domain.TbOrderExample;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -22,9 +23,9 @@ public interface TbOrderMapper {
 
     TbOrder selectByPrimaryKey(Long orderId);
 
-//    int updateByExampleSelective(@Param( "record" ) TbOrder record, @Param( "example" ) TbOrderExample example);
+    int updateByExampleSelective(@Param( "record" ) TbOrder record, @Param( "example" ) TbOrderExample example);
 
-//    int updateByExample(@Param( "record" ) TbOrder record, @Param( "example" ) TbOrderExample example);
+    int updateByExample(@Param( "record" ) TbOrder record, @Param( "example" ) TbOrderExample example);
 
     int updateByPrimaryKeySelective(TbOrder record);
 

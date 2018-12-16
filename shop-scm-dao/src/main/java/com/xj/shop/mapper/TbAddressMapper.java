@@ -3,6 +3,7 @@ package com.xj.shop.mapper;
 
 import com.xj.shop.domain.TbAddress;
 import com.xj.shop.domain.TbAddressExample;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -20,10 +21,10 @@ public interface TbAddressMapper {
     List<TbAddress> selectByExample(TbAddressExample example);
 
     TbAddress selectByPrimaryKey(Long id);
-//
-//    int updateByExampleSelective(@Param( "record" ) TbAddress record, @Param( "example" ) TbAddressExample example);
-//
-//    int updateByExample(@Param( "record" ) TbAddress record, @Param( "example" ) TbAddressExample example);
+
+    int updateByExampleSelective(@Param( "record" ) TbAddress record, @Param( "example" ) TbAddressExample example);
+
+    int updateByExample(@Param( "record" ) TbAddress record, @Param( "example" ) TbAddressExample example);
 
     int updateByPrimaryKeySelective(TbAddress record);
 

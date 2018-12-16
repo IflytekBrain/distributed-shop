@@ -3,6 +3,7 @@ package com.xj.shop.mapper;
 
 import com.xj.shop.domain.TbContent;
 import com.xj.shop.domain.TbContentExample;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -21,9 +22,9 @@ public interface TbContentMapper {
 
     TbContent selectByPrimaryKey(Long id);
 
-//    int updateByExampleSelective(@Param( "record" ) TbContent record, @Param( "example" ) TbContentExample example);
-//
-//    int updateByExample(@Param( "record" ) TbContent record, @Param( "example" ) TbContentExample example);
+    int updateByExampleSelective(@Param( "record" ) TbContent record, @Param( "example" ) TbContentExample example);
+
+    int updateByExample(@Param( "record" ) TbContent record, @Param( "example" ) TbContentExample example);
 
     int updateByPrimaryKeySelective(TbContent record);
 

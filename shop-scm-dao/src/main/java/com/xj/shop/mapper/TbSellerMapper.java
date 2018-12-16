@@ -3,6 +3,7 @@ package com.xj.shop.mapper;
 
 import com.xj.shop.domain.TbSeller;
 import com.xj.shop.domain.TbSellerExample;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -21,9 +22,9 @@ public interface TbSellerMapper {
 
     TbSeller selectByPrimaryKey(String sellerId);
 
-//    int updateByExampleSelective(@Param( "record" ) TbSeller record, @Param( "example" ) TbSellerExample example);
-//
-//    int updateByExample(@Param( "record" ) TbSeller record, @Param( "example" ) TbSellerExample example);
+    int updateByExampleSelective(@Param( "record" ) TbSeller record, @Param( "example" ) TbSellerExample example);
+
+    int updateByExample(@Param( "record" ) TbSeller record, @Param( "example" ) TbSellerExample example);
 
     int updateByPrimaryKeySelective(TbSeller record);
 

@@ -4,6 +4,7 @@ package com.xj.shop.mapper;
 
 import com.xj.shop.domain.TbPayLog;
 import com.xj.shop.domain.TbPayLogExample;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -22,9 +23,9 @@ public interface TbPayLogMapper {
 
     TbPayLog selectByPrimaryKey(String outTradeNo);
 
-   // int updateByExampleSelective(@Param( "record" ) TbPayLog record, @Param( "example" ) TbPayLogExample example);
+    int updateByExampleSelective(@Param( "record" ) TbPayLog record, @Param( "example" ) TbPayLogExample example);
 
-    //int updateByExample(@Param( "record" ) TbPayLog record, @Param( "example" ) TbPayLogExample example);
+    int updateByExample(@Param( "record" ) TbPayLog record, @Param( "example" ) TbPayLogExample example);
 
     int updateByPrimaryKeySelective(TbPayLog record);
 

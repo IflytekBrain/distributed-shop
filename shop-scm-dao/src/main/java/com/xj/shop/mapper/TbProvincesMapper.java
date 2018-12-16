@@ -3,6 +3,7 @@ package com.xj.shop.mapper;
 
 import com.xj.shop.domain.TbProvinces;
 import com.xj.shop.domain.TbProvincesExample;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -21,9 +22,9 @@ public interface TbProvincesMapper {
 
     TbProvinces selectByPrimaryKey(Integer id);
 
-//    int updateByExampleSelective(@Param( "record" ) TbProvinces record, @Param( "example" ) TbProvincesExample example);
-//
-//    int updateByExample(@Param( "record" ) TbProvinces record, @Param( "example" ) TbProvincesExample example);
+    int updateByExampleSelective(@Param( "record" ) TbProvinces record, @Param( "example" ) TbProvincesExample example);
+
+    int updateByExample(@Param( "record" ) TbProvinces record, @Param( "example" ) TbProvincesExample example);
 
     int updateByPrimaryKeySelective(TbProvinces record);
 

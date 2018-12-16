@@ -3,6 +3,7 @@ package com.xj.shop.mapper;
 
 import com.xj.shop.domain.TbUser;
 import com.xj.shop.domain.TbUserExample;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -21,9 +22,9 @@ public interface TbUserMapper {
 
     TbUser selectByPrimaryKey(Long id);
 
-//    int updateByExampleSelective(@Param( "record" ) TbUser record, @Param( "example" ) TbUserExample example);
-//
-//    int updateByExample(@Param( "record" ) TbUser record, @Param( "example" ) TbUserExample example);
+    int updateByExampleSelective(@Param( "record" ) TbUser record, @Param( "example" ) TbUserExample example);
+
+    int updateByExample(@Param( "record" ) TbUser record, @Param( "example" ) TbUserExample example);
 
     int updateByPrimaryKeySelective(TbUser record);
 

@@ -4,6 +4,7 @@ package com.xj.shop.mapper;
 
 import com.xj.shop.domain.TbItem;
 import com.xj.shop.domain.TbItemExample;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -22,9 +23,9 @@ public interface TbItemMapper {
 
     TbItem selectByPrimaryKey(Long id);
 
-//    int updateByExampleSelective(@Param( "record" ) TbItem record, @Param( "example" ) TbItemExample example);
-//
-//    int updateByExample(@Param( "record" ) TbItem record, @Param( "example" ) TbItemExample example);
+    int updateByExampleSelective(@Param( "record" ) TbItem record, @Param( "example" ) TbItemExample example);
+
+    int updateByExample(@Param( "record" ) TbItem record, @Param( "example" ) TbItemExample example);
 
     int updateByPrimaryKeySelective(TbItem record);
 

@@ -3,6 +3,7 @@ package com.xj.shop.mapper;
 
 import com.xj.shop.domain.TbSpecificationOption;
 import com.xj.shop.domain.TbSpecificationOptionExample;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -21,9 +22,9 @@ public interface TbSpecificationOptionMapper {
 
     TbSpecificationOption selectByPrimaryKey(Long id);
 
-//    int updateByExampleSelective(@Param( "record" ) TbSpecificationOption record, @Param( "example" ) TbSpecificationOptionExample example);
-//
-//    int updateByExample(@Param( "record" ) TbSpecificationOption record, @Param( "example" ) TbSpecificationOptionExample example);
+    int updateByExampleSelective(@Param( "record" ) TbSpecificationOption record, @Param( "example" ) TbSpecificationOptionExample example);
+
+    int updateByExample(@Param( "record" ) TbSpecificationOption record, @Param( "example" ) TbSpecificationOptionExample example);
 
     int updateByPrimaryKeySelective(TbSpecificationOption record);
 
