@@ -36,7 +36,7 @@
 
         <!-- Commons Settings -->
         <kyro.version>0.42</kyro.version>
-        <mysql.version>8.0.12</mysql.version>
+        <mysql.version>5.1.34</mysql.version>
     </properties>
     <dependencyManagement>
         <dependencies>
@@ -45,6 +45,12 @@
                 <artifactId>shop-scm-common</artifactId>
                 <version>0.0.1-SNAPSHOT</version>
             </dependency>
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>5.1.34</version>
+            </dependency>
+
 
             <dependency>
                 <groupId>com.xj.shop</groupId>
@@ -68,11 +74,7 @@
                 <version>${boot-dubbo.version}</version>
             </dependency>
 
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter-data-redis</artifactId>
-                <version>2.0.1.RELEASE</version>
-            </dependency>
+
             <dependency>
                 <groupId>com.alibaba.boot</groupId>
                 <artifactId>dubbo-spring-boot-actuator</artifactId>
@@ -130,16 +132,16 @@
             </dependency>
 
             <!-- 缓存 -->
-            <dependency>
-                <groupId>redis.clients</groupId>
-                <artifactId>jedis</artifactId>
-                <version>2.8.1</version>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework.data</groupId>
-                <artifactId>spring-data-redis</artifactId>
-                <version>1.7.2.RELEASE</version>
-            </dependency>
+            <!--<dependency>-->
+            <!--<groupId>redis.clients</groupId>-->
+            <!--<artifactId>jedis</artifactId>-->
+            <!--<version>2.8.1</version>-->
+            <!--</dependency>-->
+            <!--<dependency>-->
+            <!--<groupId>org.springframework.data</groupId>-->
+            <!--<artifactId>spring-data-redis</artifactId>-->
+            <!--<version>1.7.2.RELEASE</version>-->
+            <!--</dependency>-->
         </dependencies>
     </dependencyManagement>
     <build>

@@ -4,10 +4,10 @@ import com.alibaba.dubbo.config.annotation.Service;
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 import com.xj.shop.api.BrandService;
-import com.xj.shop.domain.TbBrand;
-import com.xj.shop.domain.TbBrandExample;
 import com.xj.shop.mapper.TbBrandMapper;
-import com.xj.shop.vo.PageResult;
+import com.xj.shop.pojo.domain.TbBrand;
+import com.xj.shop.pojo.domain.TbBrandExample;
+import com.xj.shop.pojo.vo.PageResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 

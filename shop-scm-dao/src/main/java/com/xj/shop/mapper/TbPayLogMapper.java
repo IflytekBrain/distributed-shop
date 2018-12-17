@@ -1,9 +1,8 @@
 package com.xj.shop.mapper;
 
 
-
-import com.xj.shop.domain.TbPayLog;
-import com.xj.shop.domain.TbPayLogExample;
+import com.xj.shop.pojo.domain.TbPayLog;
+import com.xj.shop.pojo.domain.TbPayLogExample;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;

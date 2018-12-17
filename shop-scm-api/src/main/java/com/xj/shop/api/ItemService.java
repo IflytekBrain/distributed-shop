@@ -1,7 +1,7 @@
 package com.xj.shop.api;
 
-import com.xj.shop.domain.TbItem;
-import com.xj.shop.vo.PageResult;
+import com.xj.shop.pojo.domain.TbItem;
+import com.xj.shop.pojo.vo.PageResult;
 
 import java.util.List;
 

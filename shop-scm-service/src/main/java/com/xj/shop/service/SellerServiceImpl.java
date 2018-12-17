@@ -4,10 +4,10 @@ import com.alibaba.dubbo.config.annotation.Service;
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 import com.xj.shop.api.SellerService;
-import com.xj.shop.domain.TbSeller;
-import com.xj.shop.domain.TbSellerExample;
 import com.xj.shop.mapper.TbSellerMapper;
-import com.xj.shop.vo.PageResult;
+import com.xj.shop.pojo.domain.TbSeller;
+import com.xj.shop.pojo.domain.TbSellerExample;
+import com.xj.shop.pojo.vo.PageResult;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.Date;

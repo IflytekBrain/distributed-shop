@@ -1,9 +1,9 @@
 package com.xj.shop.api;
 
 
-import com.xj.shop.domain.TbSpecification;
-import com.xj.shop.dto.Specification;
-import com.xj.shop.vo.PageResult;
+import com.xj.shop.pojo.domain.TbSpecification;
+import com.xj.shop.pojo.dto.Specification;
+import com.xj.shop.pojo.vo.PageResult;
 
 import java.util.List;
 import java.util.Map;

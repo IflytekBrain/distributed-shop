@@ -1,8 +1,8 @@
 package com.xj.shop.api;
 
 
-import com.xj.shop.domain.TbTypeTemplate;
-import com.xj.shop.vo.PageResult;
+import com.xj.shop.pojo.domain.TbTypeTemplate;
+import com.xj.shop.pojo.vo.PageResult;
 
 import java.util.List;
 import java.util.Map;

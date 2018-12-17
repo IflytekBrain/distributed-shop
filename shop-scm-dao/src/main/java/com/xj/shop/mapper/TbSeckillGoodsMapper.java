@@ -1,8 +1,8 @@
 package com.xj.shop.mapper;
 
 
-import com.xj.shop.domain.TbSeckillGoods;
-import com.xj.shop.domain.TbSeckillGoodsExample;
+import com.xj.shop.pojo.domain.TbSeckillGoods;
+import com.xj.shop.pojo.domain.TbSeckillGoodsExample;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;

@@ -1,8 +1,8 @@
 package com.xj.shop.mapper;
 
 
-import com.xj.shop.domain.TbFreightTemplate;
-import com.xj.shop.domain.TbFreightTemplateExample;
+import com.xj.shop.pojo.domain.TbFreightTemplate;
+import com.xj.shop.pojo.domain.TbFreightTemplateExample;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;

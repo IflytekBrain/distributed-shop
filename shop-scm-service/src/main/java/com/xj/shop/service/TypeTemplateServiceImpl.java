@@ -6,18 +6,19 @@ import com.alibaba.fastjson.JSON;
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 import com.xj.shop.api.TypeTemplateService;
-import com.xj.shop.domain.TbSpecificationOption;
-import com.xj.shop.domain.TbSpecificationOptionExample;
-import com.xj.shop.domain.TbTypeTemplate;
-import com.xj.shop.domain.TbTypeTemplateExample;
 import com.xj.shop.mapper.TbSpecificationOptionMapper;
 import com.xj.shop.mapper.TbTypeTemplateMapper;
-import com.xj.shop.vo.PageResult;
+import com.xj.shop.pojo.domain.TbSpecificationOption;
+import com.xj.shop.pojo.domain.TbSpecificationOptionExample;
+import com.xj.shop.pojo.domain.TbTypeTemplate;
+import com.xj.shop.pojo.domain.TbTypeTemplateExample;
+import com.xj.shop.pojo.vo.PageResult;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.redis.core.RedisTemplate;
 
 import java.util.List;
 import java.util.Map;
+
+//import org.springframework.data.redis.core.RedisTemplate;
 
 /**
  * 服务实现层
@@ -29,8 +30,8 @@ public class TypeTemplateServiceImpl implements TypeTemplateService {
 
     @Autowired
     private TbTypeTemplateMapper typeTemplateMapper;
-    @Autowired
-    private RedisTemplate redisTemplate;
+    //@Autowired
+    // private RedisTemplate redisTemplate;
     @Autowired
     private TbSpecificationOptionMapper specificationOptionMapper;
 
@@ -128,11 +129,11 @@ public class TypeTemplateServiceImpl implements TypeTemplateService {
         for (TbTypeTemplate template : templateList) {
             //得到品牌列表
             List brandList = JSON.parseArray(template.getBrandIds(), Map.class);
-            redisTemplate.boundHashOps("brandList").put(template.getId(), brandList);
+            //redisTemplate.boundHashOps("brandList").put(template.getId(), brandList);
 
             //得到规格列表
             List<Map> specList = findSpecList(template.getId());
-            redisTemplate.boundHashOps("specList").put(template.getId(), specList);
+            // redisTemplate.boundHashOps("specList").put(template.getId(), specList);
 
         }
         System.out.println("缓存品牌列表");

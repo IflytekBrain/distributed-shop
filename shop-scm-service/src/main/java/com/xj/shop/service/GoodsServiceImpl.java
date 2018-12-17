@@ -5,10 +5,10 @@ import com.alibaba.fastjson.JSON;
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 import com.xj.shop.api.GoodsService;
-import com.xj.shop.domain.*;
-import com.xj.shop.dto.Goods;
 import com.xj.shop.mapper.*;
-import com.xj.shop.vo.PageResult;
+import com.xj.shop.pojo.domain.*;
+import com.xj.shop.pojo.dto.Goods;
+import com.xj.shop.pojo.vo.PageResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 

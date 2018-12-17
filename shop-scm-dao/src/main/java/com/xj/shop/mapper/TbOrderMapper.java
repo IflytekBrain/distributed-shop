@@ -1,9 +1,8 @@
 package com.xj.shop.mapper;
 
 
-
-import com.xj.shop.domain.TbOrder;
-import com.xj.shop.domain.TbOrderExample;
+import com.xj.shop.pojo.domain.TbOrder;
+import com.xj.shop.pojo.domain.TbOrderExample;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;

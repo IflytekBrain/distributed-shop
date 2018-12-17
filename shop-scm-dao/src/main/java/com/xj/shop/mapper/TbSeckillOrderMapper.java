@@ -1,8 +1,8 @@
 package com.xj.shop.mapper;
 
 
-import com.xj.shop.domain.TbSeckillOrder;
-import com.xj.shop.domain.TbSeckillOrderExample;
+import com.xj.shop.pojo.domain.TbSeckillOrder;
+import com.xj.shop.pojo.domain.TbSeckillOrderExample;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
