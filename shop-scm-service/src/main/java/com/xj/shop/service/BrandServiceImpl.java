@@ -9,11 +9,13 @@ import com.xj.shop.pojo.domain.TbBrand;
 import com.xj.shop.pojo.domain.TbBrandExample;
 import com.xj.shop.pojo.vo.PageResult;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Map;
 
+@Component
 @Service
 @Transactional
 public class BrandServiceImpl implements BrandService {

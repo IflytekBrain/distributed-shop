@@ -3,15 +3,12 @@ spring:
   application:
     name: shop-scm-service
   datasource:
-    druid:
+      type: com.alibaba.druid.pool.DruidDataSource
+      driver-class-name: com.mysql.jdbc.Driver
       url: jdbc:mysql://192.168.25.129:3306/pinyougoudb?useUnicode=true&characterEncoding=utf-8&useSSL=false
       username: root
       password: root
-      initial-size: 1
-      min-idle: 1
-      max-active: 20
-      test-on-borrow: true
-      driver-class-name: com.mysql.jdbc.Driver
+
 server:
   port: 8501
 
@@ -20,11 +17,7 @@ mybatis:
   type-aliases-package: com.xj.shop.pojo
   mapper-locations: classpath:mapper/*.xml
 
-# Services Versions
-services:
-  versions:
-    user:
-      v1: 1.0.0
+
 
 # Dubbo Config properties
 dubbo:

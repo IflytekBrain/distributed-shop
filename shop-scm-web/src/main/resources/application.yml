@@ -20,7 +20,7 @@ services:
 # Dubbo Config properties
 dubbo:
   scan:
-    basePackages: com.funtl.myshop.service.user.consumer.controller
+    basePackages: com.xj.shop.controller.BranchController
   ## ApplicationConfig Bean
   application:
     id: shop-scm-web

@@ -8,13 +8,12 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-
 @RestController
 public class BranchController {
     @Reference
     private BrandService brandService;
 
-    @RequestMapping( "list" )
+    @RequestMapping( "/brand/findAll.do" )
     public List<TbBrand> list() {
         List<TbBrand> all = brandService.findAll();
         return all;
