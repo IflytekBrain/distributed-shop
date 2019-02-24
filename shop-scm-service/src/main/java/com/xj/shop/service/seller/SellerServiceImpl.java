@@ -1,4 +1,4 @@
-package com.xj.shop.service;
+package com.xj.shop.service.seller;
 
 import com.alibaba.dubbo.config.annotation.Service;
 import com.github.pagehelper.Page;
@@ -14,7 +14,7 @@ import java.util.Date;
 import java.util.List;
 
 /**
- * 服务实现层
+ * 商家服务实现层
  *
  * @author Administrator
  */

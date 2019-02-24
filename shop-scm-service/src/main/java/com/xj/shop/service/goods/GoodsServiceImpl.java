@@ -1,4 +1,4 @@
-package com.xj.shop.service;
+package com.xj.shop.service.goods;
 
 import com.alibaba.dubbo.config.annotation.Service;
 import com.alibaba.fastjson.JSON;

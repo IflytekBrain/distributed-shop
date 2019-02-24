@@ -1,4 +1,4 @@
-package com.xj.shop.service;
+package com.xj.shop.service.template;
 
 
 import com.alibaba.dubbo.config.annotation.Service;
