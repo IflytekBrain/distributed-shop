@@ -7,9 +7,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 
-@SpringBootApplication( scanBasePackages = "com.xj.shop" )
+@SpringBootApplication( scanBasePackages = "com.ele.me.shop" )
 @EnableTransactionManagement
-@MapperScan( basePackages = "com.xj.shop" )
+@MapperScan( basePackages = "com.ele.me.shop" )
 @EnableDubbo
 public class ShopCmsServerApplication {
     public static void main(String[] args) {

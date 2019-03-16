@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.xj.shop.mapper.TbAreasMapper">
-  <resultMap id="BaseResultMap" type="com.xj.shop.pojo.domain.TbAreas">
+<mapper namespace="com.ele.me.shop.mapper.TbAreasMapper">
+    <resultMap id="BaseResultMap" type="com.ele.me.shop.pojo.domain.TbAreas">
     <id column="id" property="id" jdbcType="INTEGER" />
     <result column="areaid" property="areaid" jdbcType="VARCHAR" />
     <result column="area" property="area" jdbcType="VARCHAR" />
@@ -68,7 +68,7 @@
   <sql id="Base_Column_List" >
     id, areaid, area, cityid
   </sql>
-  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.xj.shop.pojo.domain.TbAreasExample">
+    <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.ele.me.shop.pojo.domain.TbAreasExample">
     select
     <if test="distinct" >
       distinct
@@ -92,19 +92,19 @@
     delete from tb_areas
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <delete id="deleteByExample" parameterType="com.xj.shop.pojo.domain.TbAreasExample">
+    <delete id="deleteByExample" parameterType="com.ele.me.shop.pojo.domain.TbAreasExample">
     delete from tb_areas
     <if test="_parameter != null" >
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="com.xj.shop.pojo.domain.TbAreas">
+    <insert id="insert" parameterType="com.ele.me.shop.pojo.domain.TbAreas">
     insert into tb_areas (id, areaid, area, 
       cityid)
     values (#{id,jdbcType=INTEGER}, #{areaid,jdbcType=VARCHAR}, #{area,jdbcType=VARCHAR}, 
       #{cityid,jdbcType=VARCHAR})
   </insert>
-  <insert id="insertSelective" parameterType="com.xj.shop.pojo.domain.TbAreas">
+    <insert id="insertSelective" parameterType="com.ele.me.shop.pojo.domain.TbAreas">
     insert into tb_areas
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="id != null" >
@@ -135,7 +135,8 @@
       </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="com.xj.shop.pojo.domain.TbAreasExample" resultType="java.lang.Integer">
+    <select id="countByExample" parameterType="com.ele.me.shop.pojo.domain.TbAreasExample"
+            resultType="java.lang.Integer">
     select count(*) from tb_areas
     <if test="_parameter != null" >
       <include refid="Example_Where_Clause" />
@@ -171,7 +172,7 @@
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
-  <update id="updateByPrimaryKeySelective" parameterType="com.xj.shop.pojo.domain.TbAreas">
+    <update id="updateByPrimaryKeySelective" parameterType="com.ele.me.shop.pojo.domain.TbAreas">
     update tb_areas
     <set >
       <if test="areaid != null" >
@@ -186,7 +187,7 @@
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.xj.shop.pojo.domain.TbAreas">
+    <update id="updateByPrimaryKey" parameterType="com.ele.me.shop.pojo.domain.TbAreas">
     update tb_areas
     set areaid = #{areaid,jdbcType=VARCHAR},
       area = #{area,jdbcType=VARCHAR},

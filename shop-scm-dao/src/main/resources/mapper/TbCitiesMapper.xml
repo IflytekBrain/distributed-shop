@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.xj.shop.mapper.TbCitiesMapper">
-    <resultMap id="BaseResultMap" type="com.xj.shop.pojo.domain.TbCities">
+<mapper namespace="com.ele.me.shop.mapper.TbCitiesMapper">
+    <resultMap id="BaseResultMap" type="com.ele.me.shop.pojo.domain.TbCities">
     <id column="id" property="id" jdbcType="INTEGER" />
     <result column="cityid" property="cityid" jdbcType="VARCHAR" />
     <result column="city" property="city" jdbcType="VARCHAR" />
@@ -68,7 +68,7 @@
   <sql id="Base_Column_List" >
     id, cityid, city, provinceid
   </sql>
-    <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.xj.shop.pojo.domain.TbCitiesExample">
+    <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.ele.me.shop.pojo.domain.TbCitiesExample">
     select
     <if test="distinct" >
       distinct
@@ -92,19 +92,19 @@
     delete from tb_cities
     where id = #{id,jdbcType=INTEGER}
   </delete>
-    <delete id="deleteByExample" parameterType="com.xj.shop.pojo.domain.TbCitiesExample">
+    <delete id="deleteByExample" parameterType="com.ele.me.shop.pojo.domain.TbCitiesExample">
     delete from tb_cities
     <if test="_parameter != null" >
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-    <insert id="insert" parameterType="com.xj.shop.pojo.domain.TbCities">
+    <insert id="insert" parameterType="com.ele.me.shop.pojo.domain.TbCities">
     insert into tb_cities (id, cityid, city, 
       provinceid)
     values (#{id,jdbcType=INTEGER}, #{cityid,jdbcType=VARCHAR}, #{city,jdbcType=VARCHAR}, 
       #{provinceid,jdbcType=VARCHAR})
   </insert>
-    <insert id="insertSelective" parameterType="com.xj.shop.pojo.domain.TbCities">
+    <insert id="insertSelective" parameterType="com.ele.me.shop.pojo.domain.TbCities">
     insert into tb_cities
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="id != null" >
@@ -135,7 +135,8 @@
       </if>
     </trim>
   </insert>
-    <select id="countByExample" parameterType="com.xj.shop.pojo.domain.TbCitiesExample" resultType="java.lang.Integer">
+    <select id="countByExample" parameterType="com.ele.me.shop.pojo.domain.TbCitiesExample"
+            resultType="java.lang.Integer">
     select count(*) from tb_cities
     <if test="_parameter != null" >
       <include refid="Example_Where_Clause" />
@@ -171,7 +172,7 @@
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
-    <update id="updateByPrimaryKeySelective" parameterType="com.xj.shop.pojo.domain.TbCities">
+    <update id="updateByPrimaryKeySelective" parameterType="com.ele.me.shop.pojo.domain.TbCities">
     update tb_cities
     <set >
       <if test="cityid != null" >
@@ -186,7 +187,7 @@
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
-    <update id="updateByPrimaryKey" parameterType="com.xj.shop.pojo.domain.TbCities">
+    <update id="updateByPrimaryKey" parameterType="com.ele.me.shop.pojo.domain.TbCities">
     update tb_cities
     set cityid = #{cityid,jdbcType=VARCHAR},
       city = #{city,jdbcType=VARCHAR},

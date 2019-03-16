@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.xj.shop.mapper.TbOrderMapper">
-    <resultMap id="BaseResultMap" type="com.xj.shop.pojo.domain.TbOrder">
+<mapper namespace="com.ele.me.shop.mapper.TbOrderMapper">
+    <resultMap id="BaseResultMap" type="com.ele.me.shop.pojo.domain.TbOrder">
     <id column="order_id" property="orderId" jdbcType="BIGINT" />
     <result column="payment" property="payment" jdbcType="DECIMAL" />
     <result column="payment_type" property="paymentType" jdbcType="VARCHAR" />
@@ -92,7 +92,7 @@
     buyer_nick, buyer_rate, receiver_area_name, receiver_mobile, receiver_zip_code, receiver, 
     expire, invoice_type, source_type, seller_id
   </sql>
-    <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.xj.shop.pojo.domain.TbOrderExample">
+    <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.ele.me.shop.pojo.domain.TbOrderExample">
     select
     <if test="distinct" >
       distinct
@@ -116,13 +116,13 @@
     delete from tb_order
     where order_id = #{orderId,jdbcType=BIGINT}
   </delete>
-    <delete id="deleteByExample" parameterType="com.xj.shop.pojo.domain.TbOrderExample">
+    <delete id="deleteByExample" parameterType="com.ele.me.shop.pojo.domain.TbOrderExample">
     delete from tb_order
     <if test="_parameter != null" >
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-    <insert id="insert" parameterType="com.xj.shop.pojo.domain.TbOrder">
+    <insert id="insert" parameterType="com.ele.me.shop.pojo.domain.TbOrder">
     insert into tb_order (order_id, payment, payment_type, 
       post_fee, status, create_time, 
       update_time, payment_time, consign_time, 
@@ -142,7 +142,7 @@
       #{expire,jdbcType=TIMESTAMP}, #{invoiceType,jdbcType=VARCHAR}, #{sourceType,jdbcType=VARCHAR}, 
       #{sellerId,jdbcType=VARCHAR})
   </insert>
-    <insert id="insertSelective" parameterType="com.xj.shop.pojo.domain.TbOrder">
+    <insert id="insertSelective" parameterType="com.ele.me.shop.pojo.domain.TbOrder">
     insert into tb_order
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="orderId != null" >
@@ -299,7 +299,8 @@
       </if>
     </trim>
   </insert>
-    <select id="countByExample" parameterType="com.xj.shop.pojo.domain.TbOrderExample" resultType="java.lang.Integer">
+    <select id="countByExample" parameterType="com.ele.me.shop.pojo.domain.TbOrderExample"
+            resultType="java.lang.Integer">
     select count(*) from tb_order
     <if test="_parameter != null" >
       <include refid="Example_Where_Clause" />
@@ -419,7 +420,7 @@
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
-    <update id="updateByPrimaryKeySelective" parameterType="com.xj.shop.pojo.domain.TbOrder">
+    <update id="updateByPrimaryKeySelective" parameterType="com.ele.me.shop.pojo.domain.TbOrder">
     update tb_order
     <set >
       <if test="payment != null" >
@@ -497,7 +498,7 @@
     </set>
     where order_id = #{orderId,jdbcType=BIGINT}
   </update>
-    <update id="updateByPrimaryKey" parameterType="com.xj.shop.pojo.domain.TbOrder">
+    <update id="updateByPrimaryKey" parameterType="com.ele.me.shop.pojo.domain.TbOrder">
     update tb_order
     set payment = #{payment,jdbcType=DECIMAL},
       payment_type = #{paymentType,jdbcType=VARCHAR},

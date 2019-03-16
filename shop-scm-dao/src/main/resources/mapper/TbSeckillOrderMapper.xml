@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.xj.shop.mapper.TbSeckillOrderMapper">
-    <resultMap id="BaseResultMap" type="com.xj.shop.pojo.domain.TbSeckillOrder">
+<mapper namespace="com.ele.me.shop.mapper.TbSeckillOrderMapper">
+    <resultMap id="BaseResultMap" type="com.ele.me.shop.pojo.domain.TbSeckillOrder">
     <id column="id" property="id" jdbcType="BIGINT" />
     <result column="seckill_id" property="seckillId" jdbcType="BIGINT" />
     <result column="money" property="money" jdbcType="DECIMAL" />
@@ -78,7 +78,7 @@
     receiver_mobile, receiver, transaction_id
   </sql>
     <select id="selectByExample" resultMap="BaseResultMap"
-            parameterType="com.xj.shop.pojo.domain.TbSeckillOrderExample">
+            parameterType="com.ele.me.shop.pojo.domain.TbSeckillOrderExample">
     select
     <if test="distinct" >
       distinct
@@ -102,13 +102,13 @@
     delete from tb_seckill_order
     where id = #{id,jdbcType=BIGINT}
   </delete>
-    <delete id="deleteByExample" parameterType="com.xj.shop.pojo.domain.TbSeckillOrderExample">
+    <delete id="deleteByExample" parameterType="com.ele.me.shop.pojo.domain.TbSeckillOrderExample">
     delete from tb_seckill_order
     <if test="_parameter != null" >
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-    <insert id="insert" parameterType="com.xj.shop.pojo.domain.TbSeckillOrder">
+    <insert id="insert" parameterType="com.ele.me.shop.pojo.domain.TbSeckillOrder">
     insert into tb_seckill_order (id, seckill_id, money, 
       user_id, seller_id, create_time, 
       pay_time, status, receiver_address, 
@@ -120,7 +120,7 @@
       #{receiverMobile,jdbcType=VARCHAR}, #{receiver,jdbcType=VARCHAR}, #{transactionId,jdbcType=VARCHAR}
       )
   </insert>
-    <insert id="insertSelective" parameterType="com.xj.shop.pojo.domain.TbSeckillOrder">
+    <insert id="insertSelective" parameterType="com.ele.me.shop.pojo.domain.TbSeckillOrder">
     insert into tb_seckill_order
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="id != null" >
@@ -199,7 +199,7 @@
       </if>
     </trim>
   </insert>
-    <select id="countByExample" parameterType="com.xj.shop.pojo.domain.TbSeckillOrderExample"
+    <select id="countByExample" parameterType="com.ele.me.shop.pojo.domain.TbSeckillOrderExample"
             resultType="java.lang.Integer">
     select count(*) from tb_seckill_order
     <if test="_parameter != null" >
@@ -268,7 +268,7 @@
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
-    <update id="updateByPrimaryKeySelective" parameterType="com.xj.shop.pojo.domain.TbSeckillOrder">
+    <update id="updateByPrimaryKeySelective" parameterType="com.ele.me.shop.pojo.domain.TbSeckillOrder">
     update tb_seckill_order
     <set >
       <if test="seckillId != null" >
@@ -307,7 +307,7 @@
     </set>
     where id = #{id,jdbcType=BIGINT}
   </update>
-    <update id="updateByPrimaryKey" parameterType="com.xj.shop.pojo.domain.TbSeckillOrder">
+    <update id="updateByPrimaryKey" parameterType="com.ele.me.shop.pojo.domain.TbSeckillOrder">
     update tb_seckill_order
     set seckill_id = #{seckillId,jdbcType=BIGINT},
       money = #{money,jdbcType=DECIMAL},

@@ -9,8 +9,14 @@ import java.util.List;
  * @author jt
  */
 public class PageResult implements Serializable {
-    private long total; // 总记录数
-    private List rows; // 返回每页的数据的集合
+    /**
+     * 总记录数
+     */
+    private long total;
+    /**
+     * 每页的数据集合
+     */
+    private List rows;
 
     public PageResult(long total, List rows) {
         super();

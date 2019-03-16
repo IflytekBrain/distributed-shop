@@ -1,12 +1,11 @@
  //品牌控制层
-app.controller('brandController' ,function($scope,brandService){
-
-	 // 分页查询
-    $scope.search = function(page,rows){
+app.controller("brandController",function($scope,$controller,$http,brandService){
+        $controller('baseController',{$scope:$scope});
+        $scope.searchEntity={};
+    	// 假设定义一个查询的实体：searchEntity
+    	$scope.search = function(page,rows){
     		// 向后台发送请求获取数据:
-    		brandService.search(page,rows).success(function(response){
-    		    //$scope.paginationConf.totalItems改变分页控件的总条数，
-    		    //这时分页控件自动按总条数分也页
+    		brandService.search(page,rows,$scope.searchEntity).success(function(response){
     			$scope.paginationConf.totalItems = response.total;
     			$scope.list = response.rows;
     		});

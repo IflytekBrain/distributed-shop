@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.xj.shop.mapper.TbProvincesMapper">
-    <resultMap id="BaseResultMap" type="com.xj.shop.pojo.domain.TbProvinces">
+<mapper namespace="com.ele.me.shop.mapper.TbProvincesMapper">
+    <resultMap id="BaseResultMap" type="com.ele.me.shop.pojo.domain.TbProvinces">
     <id column="id" property="id" jdbcType="INTEGER" />
     <result column="provinceid" property="provinceid" jdbcType="VARCHAR" />
     <result column="province" property="province" jdbcType="VARCHAR" />
@@ -67,7 +67,8 @@
   <sql id="Base_Column_List" >
     id, provinceid, province
   </sql>
-    <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.xj.shop.pojo.domain.TbProvincesExample">
+    <select id="selectByExample" resultMap="BaseResultMap"
+            parameterType="com.ele.me.shop.pojo.domain.TbProvincesExample">
     select
     <if test="distinct" >
       distinct
@@ -91,19 +92,19 @@
     delete from tb_provinces
     where id = #{id,jdbcType=INTEGER}
   </delete>
-    <delete id="deleteByExample" parameterType="com.xj.shop.pojo.domain.TbProvincesExample">
+    <delete id="deleteByExample" parameterType="com.ele.me.shop.pojo.domain.TbProvincesExample">
     delete from tb_provinces
     <if test="_parameter != null" >
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-    <insert id="insert" parameterType="com.xj.shop.pojo.domain.TbProvinces">
+    <insert id="insert" parameterType="com.ele.me.shop.pojo.domain.TbProvinces">
     insert into tb_provinces (id, provinceid, province
       )
     values (#{id,jdbcType=INTEGER}, #{provinceid,jdbcType=VARCHAR}, #{province,jdbcType=VARCHAR}
       )
   </insert>
-    <insert id="insertSelective" parameterType="com.xj.shop.pojo.domain.TbProvinces">
+    <insert id="insertSelective" parameterType="com.ele.me.shop.pojo.domain.TbProvinces">
     insert into tb_provinces
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="id != null" >
@@ -128,7 +129,7 @@
       </if>
     </trim>
   </insert>
-    <select id="countByExample" parameterType="com.xj.shop.pojo.domain.TbProvincesExample"
+    <select id="countByExample" parameterType="com.ele.me.shop.pojo.domain.TbProvincesExample"
             resultType="java.lang.Integer">
     select count(*) from tb_provinces
     <if test="_parameter != null" >
@@ -161,7 +162,7 @@
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
-    <update id="updateByPrimaryKeySelective" parameterType="com.xj.shop.pojo.domain.TbProvinces">
+    <update id="updateByPrimaryKeySelective" parameterType="com.ele.me.shop.pojo.domain.TbProvinces">
     update tb_provinces
     <set >
       <if test="provinceid != null" >
@@ -173,7 +174,7 @@
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
-    <update id="updateByPrimaryKey" parameterType="com.xj.shop.pojo.domain.TbProvinces">
+    <update id="updateByPrimaryKey" parameterType="com.ele.me.shop.pojo.domain.TbProvinces">
     update tb_provinces
     set provinceid = #{provinceid,jdbcType=VARCHAR},
       province = #{province,jdbcType=VARCHAR}

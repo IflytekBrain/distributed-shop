@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.xj.shop.mapper.TbTypeTemplateMapper">
-    <resultMap id="BaseResultMap" type="com.xj.shop.pojo.domain.TbTypeTemplate">
+<mapper namespace="com.ele.me.shop.mapper.TbTypeTemplateMapper">
+    <resultMap id="BaseResultMap" type="com.ele.me.shop.pojo.domain.TbTypeTemplate">
     <id column="id" property="id" jdbcType="BIGINT" />
     <result column="name" property="name" jdbcType="VARCHAR" />
     <result column="spec_ids" property="specIds" jdbcType="VARCHAR" />
@@ -70,7 +70,7 @@
     id, name, spec_ids, brand_ids, custom_attribute_items
   </sql>
     <select id="selectByExample" resultMap="BaseResultMap"
-            parameterType="com.xj.shop.pojo.domain.TbTypeTemplateExample">
+            parameterType="com.ele.me.shop.pojo.domain.TbTypeTemplateExample">
     select
     <if test="distinct" >
       distinct
@@ -94,19 +94,19 @@
     delete from tb_type_template
     where id = #{id,jdbcType=BIGINT}
   </delete>
-    <delete id="deleteByExample" parameterType="com.xj.shop.pojo.domain.TbTypeTemplateExample">
+    <delete id="deleteByExample" parameterType="com.ele.me.shop.pojo.domain.TbTypeTemplateExample">
     delete from tb_type_template
     <if test="_parameter != null" >
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-    <insert id="insert" parameterType="com.xj.shop.pojo.domain.TbTypeTemplate">
+    <insert id="insert" parameterType="com.ele.me.shop.pojo.domain.TbTypeTemplate">
     insert into tb_type_template (id, name, spec_ids, 
       brand_ids, custom_attribute_items)
     values (#{id,jdbcType=BIGINT}, #{name,jdbcType=VARCHAR}, #{specIds,jdbcType=VARCHAR}, 
       #{brandIds,jdbcType=VARCHAR}, #{customAttributeItems,jdbcType=VARCHAR})
   </insert>
-    <insert id="insertSelective" parameterType="com.xj.shop.pojo.domain.TbTypeTemplate">
+    <insert id="insertSelective" parameterType="com.ele.me.shop.pojo.domain.TbTypeTemplate">
     insert into tb_type_template
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="id != null" >
@@ -143,7 +143,7 @@
       </if>
     </trim>
   </insert>
-    <select id="countByExample" parameterType="com.xj.shop.pojo.domain.TbTypeTemplateExample"
+    <select id="countByExample" parameterType="com.ele.me.shop.pojo.domain.TbTypeTemplateExample"
             resultType="java.lang.Integer">
     select count(*) from tb_type_template
     <if test="_parameter != null" >
@@ -184,7 +184,7 @@
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
-    <update id="updateByPrimaryKeySelective" parameterType="com.xj.shop.pojo.domain.TbTypeTemplate">
+    <update id="updateByPrimaryKeySelective" parameterType="com.ele.me.shop.pojo.domain.TbTypeTemplate">
     update tb_type_template
     <set >
       <if test="name != null" >
@@ -202,7 +202,7 @@
     </set>
     where id = #{id,jdbcType=BIGINT}
   </update>
-    <update id="updateByPrimaryKey" parameterType="com.xj.shop.pojo.domain.TbTypeTemplate">
+    <update id="updateByPrimaryKey" parameterType="com.ele.me.shop.pojo.domain.TbTypeTemplate">
     update tb_type_template
     set name = #{name,jdbcType=VARCHAR},
       spec_ids = #{specIds,jdbcType=VARCHAR},

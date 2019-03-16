@@ -23,11 +23,11 @@ import java.util.Map;
 /**
  * 服务实现层
  *
+ *
  * @author Administrator
  */
 @Service
 public class TypeTemplateServiceImpl implements TypeTemplateService {
-
     @Autowired
     private TbTypeTemplateMapper typeTemplateMapper;
     //@Autowired
@@ -96,7 +96,6 @@ public class TypeTemplateServiceImpl implements TypeTemplateService {
 
         TbTypeTemplateExample example = new TbTypeTemplateExample();
         TbTypeTemplateExample.Criteria criteria = example.createCriteria();
-
         if (typeTemplate != null) {
             if (typeTemplate.getName() != null && typeTemplate.getName().length() > 0) {
                 criteria.andNameLike("%" + typeTemplate.getName() + "%");
@@ -110,14 +109,10 @@ public class TypeTemplateServiceImpl implements TypeTemplateService {
             if (typeTemplate.getCustomAttributeItems() != null && typeTemplate.getCustomAttributeItems().length() > 0) {
                 criteria.andCustomAttributeItemsLike("%" + typeTemplate.getCustomAttributeItems() + "%");
             }
-
         }
-
         Page<TbTypeTemplate> page = (Page<TbTypeTemplate>) typeTemplateMapper.selectByExample(example);
-
         //缓存处理
         saveToRedis();
-
         return new PageResult(page.getTotal(), page.getResult());
     }
 
@@ -164,7 +159,6 @@ public class TypeTemplateServiceImpl implements TypeTemplateService {
             criteria.andSpecIdEqualTo(new Long((Integer) map.get("id")));
             //查询规格选项
             List<TbSpecificationOption> specOptionList = specificationOptionMapper.selectByExample(example);
-
             map.put("options", specOptionList);//{"id":27,"text":"网络",options:[{id：xxx,optionName:移动2G}]}
         }
         return list;

@@ -3,9 +3,7 @@ package com.ele.me.shop.pojo.vo;
 import java.io.Serializable;
 
 /**
- * 用于向页面传递信息的类
- *
- * @author jt
+ * 用于向页面传递信息的类j
  */
 public class Result implements Serializable {
 

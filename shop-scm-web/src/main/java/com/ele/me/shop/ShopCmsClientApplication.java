@@ -5,7 +5,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 
-@SpringBootApplication( scanBasePackages = "com.xj.shop" )
+@SpringBootApplication( scanBasePackages = "com.ele.me.shop" )
 @EnableDubbo
 public class ShopCmsClientApplication {
     public static void main(String[] args) {
